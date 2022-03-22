@@ -4,7 +4,7 @@
 		<span>
 			<%= link_to "EDIT", edit_member_path(@member) %>
 			<%= link_to "DELETE", @member, method: :delete, data: { confirm: "Would you really want to delete #{@member.to_s}?"} %>
-			<%= link_to "BACK", :back %>
+			<%= link_to "BACK", members_path %>
 		</span>
   	</div>
   	<div class='show-left'>

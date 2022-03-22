@@ -4,7 +4,7 @@
 		<span>
 			<%= link_to "EDIT", edit_task_path(@task) %>
 			<%= link_to "DELETE", @task, method: :delete, data: { confirm: "Would you really want to delete #{@task.to_s}?"} %>
-			<%= link_to "BACK", :back %>
+			<%= link_to "BACK", tasks_path %>
 		</span>
   	</div>
   	<div class='show-left'>
