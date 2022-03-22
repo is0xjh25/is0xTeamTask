@@ -1,0 +1,41 @@
+<div class='main'>
+  <div class='title'>
+    <h3>Update Member</h3>
+  </div>
+
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@member.errors.count, "error") %>
+        prohibited this member from being saved:
+      </h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for(@member) do |f| %>
+    <label>First Name</label><br>
+    <%= f.text_field :first_name, autofocus: true, :required => 'required' %><br>
+    <br>
+
+    <label>Last Name</label><br>
+    <%= f.text_field :last_name, autofocus: true, :required => 'required' %><br>
+    <br>
+
+    <label>User Email</label><br>
+    <%= f.email_field :email, autofocus: true, :required => 'required' %><br>
+    <br>
+
+    <label>User Phone</label><br>
+    <%= f.telephone_field :phone, autofocus: true, :required => 'required' %><br>
+    <br>
+
+    <%= f.submit "UPDATE" %>
+  <% end %>
+  <%= button_to "DISCARD", member_path(@member), method: "get", data: { confirm: "Would you like to discard your change?"} %>
+</div>

@@ -1,0 +1,30 @@
+<div class='main'>
+  <div class='title'>
+    <h1>All Tasks</h1>
+  </div>
+  <div class='main-left tableFixHead'>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NAME</th> 
+          <th>PARTICIPANTS</th>
+          <th>MORE</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <% @tasks.each do |task| %>
+          <tr>
+            <td><%= task.id %></td>
+            <td><%= task.name.titleize %></td>
+            <td><%= Participant.count_members(task) %></td>
+            <td><%= link_to "DETAILS", task_path(task) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class='main-right'>
+    <b><%= link_to "+ New Task", new_task_path %></b>
+  </div>
+</div>

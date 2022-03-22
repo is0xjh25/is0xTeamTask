@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment.rb'
+
+
+# TasksController.new.add_member(task: Task.find_by(id: 1) , member: Member.second)
+# Task.third.add_member(Member.first)
+# Task.first.remove_member(Member.first.id)
+
+puts "---Members---"
+Member.all_info.each {|m| 
+	puts m 
+	puts
+}
+
+puts "---Tasks---"
+Task.all_info.each {|m| 
+	puts m 
+	puts
+}
+
+puts "---Participants---"
+Participant.all_info.each {|m| 
+	puts m 
+	puts
+}

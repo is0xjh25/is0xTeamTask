@@ -1,0 +1,33 @@
+<div class='main'>
+  	<div class='title'>
+    	<h1 style="display:inline-block; margin-right:30px"><%= @task.id %>. <%= @task.name.titleize %></h1>
+		<span>
+			<%= link_to "EDIT", edit_task_path(@task) %>
+			<%= link_to "DELETE", @task, method: :delete, data: { confirm: "Would you really want to delete #{@task.to_s}?"} %>
+			<%= link_to "BACK", :back %>
+		</span>
+  	</div>
+  	<div class='show-left'>
+		<h4>Start Time</h4><%= @task.start.to_s[0...-4] %>
+		<h4>Due Time</h4><%= @task.due.to_s[0...-4]%>
+		<h4>Description</h4><%= @task.description %>
+	</div>
+  	<div class='show-right'>
+		<h4>Manage Participants</h4>
+			<div class='list'>
+				<% @participants.each do |p| %>
+					<div class='list-element'>
+						<%= link_to p.to_s, member_path(p) %>
+						<%= button_to 'REMOVE', participants_remove_member_path(task: @task, member: p, redirect: "") %>
+					</div>
+				<% end %>
+				<% @members.each do |m| %>
+					<div class='list-element'>
+						<%= link_to m.to_s, member_path(m) %>
+						<%= button_to 'ADD', participants_add_member_path(task: @task, member: m) %>
+					</div>
+				<% end %>
+			</div>
+	</div>
+</div>
+

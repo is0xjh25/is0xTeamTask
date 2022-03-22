@@ -1,0 +1,27 @@
+<div class='main'>
+  	<div class='title'>
+    	<h1 style="display:inline-block; margin-right:30px"><%= @member.id %>. <%= @member.to_s %></h1>
+		<span>
+			<%= link_to "EDIT", edit_member_path(@member) %>
+			<%= link_to "DELETE", @member, method: :delete, data: { confirm: "Would you really want to delete #{@member.to_s}?"} %>
+			<%= link_to "BACK", :back %>
+		</span>
+  	</div>
+  	<div class='show-left'>
+		<h4>EMAIL</h4><%= mail_to @member.email, @member.email, subject: "Hello from is0xTeamTask!" %>
+		<h4>PHONE</h4><%= @member.phone %>
+	</div>
+	<div class='show-right'>
+		<h4>Manage Tasks</h4>
+		<div class='list'>	
+			<% @member.tasks.each do |task| %>
+				<div class='list-element'>
+					<%= link_to task.id.to_s + ". " + task.name, task_path(task) %>
+					<%= button_to 'REMOVE', participants_remove_member_path(task: task, member: @member, redirect: "member_show") %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
