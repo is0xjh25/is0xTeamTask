@@ -45,30 +45,20 @@ _is0xTeamTask_ is a application for workspace support. However, it can be used i
 
 - **Create**
 <p align="center">
-  <img alt="Create Member" src="demo/create-member.gif" width="500" >
-  <img alt="Create Task" src="demo/create-task.gif" width="500" >
+  <img alt="Create Member" src="demo/create-member.png" width="500" >
+  <img alt="Create Task" src="demo/create-task.png" width="500" >
 </p>
 
 - **Edit**
 <p align="center">
-  <img alt="Edit Member" src="demo/edit-member.gif" width="500" >
-  <img alt="Edit Task" src="demo/edit-task.gif" width="500" >
+  <img alt="Edit Member" src="demo/edit-member.png" width="500" >
+  <img alt="Edit Task" src="demo/edit-task.png" width="500" >
 </p>
 
-- **Delete**
+- **Show**
 <p align="center">
-  <img alt="Delete Member" src="demo/delete-member.gif" width="500" >
-  <img alt="Delete Task" src="demo/delete-task.gif" width="500" >
-</p>
-
-- **Add Member**
-<p align="center">
-  <img alt="Add Member" src="demo/add-member.gif" width="500" >
-</p>
-
-- **Remove Member**
-<p align="center">
-  <img alt="Remove Member" src="demo/remove-member.gif" width="500" >
+  <img alt="View Member" src="demo/view-member.png" width="500" >
+  <img alt="View Task" src="demo/view-task.png" width="500" >
 </p>
 
 ## Developed By
