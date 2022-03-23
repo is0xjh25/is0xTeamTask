@@ -1,10 +1,10 @@
 <div class='main'>
   <div class='title'>
-    <h3>Update Member</h3>
+    <h2>Update Member</h2>
   </div>
 
   <% if @member.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class='validation'>
       <h2>
         <%= pluralize(@member.errors.count, "error") %>
         prohibited this member from being saved:

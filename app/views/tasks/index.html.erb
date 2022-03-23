@@ -8,6 +8,7 @@
         <tr>
           <th>#</th>
           <th>NAME</th> 
+          <th>DUE DATE</th>
           <th>PARTICIPANTS</th>
           <th>MORE</th> 
         </tr>
@@ -17,6 +18,7 @@
           <tr>
             <td><%= task.id %></td>
             <td><%= task.name.titleize %></td>
+            <td><%= task.due.to_s[0...-4] %></td>
             <td><%= Participant.count_members(task) %></td>
             <td><%= link_to "DETAILS", task_path(task) %></td>
           </tr>

@@ -1,13 +1,13 @@
 <div class='main'>
   <div class='title'>
-    <h3>Create New Task</h3>
+    <h2>Create New Task</h2>
   </div>
   <% if @task.errors.any? %>
-    <div id="error_explanation">
-      <h2>
+    <div id="error_explanation" class='validation'>
+      <h5>
         <%= pluralize(@task.errors.count, "error") %>
         prohibited this task from being saved:
-      </h2>
+      </h5>
 
       <ul>
       <% @task.errors.full_messages.each do |msg| %>

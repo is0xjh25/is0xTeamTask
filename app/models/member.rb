@@ -9,8 +9,8 @@ class Member < ActiveRecord::Base
 	VALID_PHONE_REGEX = /\A\d{10}\z/
 	validates :first_name, presence: true, format: { with: VALID_NAME_REGEX, message: "should not contain numbers or symbols" }
 	validates :last_name, presence: true, format: { with: VALID_NAME_REGEX, message: "should not contain numbers or symbols" }
-	validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX, message: "invalid email"}
-	validates :phone, presence: true, uniqueness: true, format: { with: VALID_PHONE_REGEX, message: "invalid number"}
+	validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX, message: "invalid"}
+	validates :phone, presence: true, uniqueness: true, format: { with: VALID_PHONE_REGEX, message: "invalid"}
 
 	def to_s
 		return self.first_name + " " + self.last_name

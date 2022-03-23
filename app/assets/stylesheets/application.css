@@ -93,7 +93,7 @@ body {
 }
 
 .main-left {
-	width: 50%;
+	width: 60%;
 	height: 90%;
 	float: left;
 	margin-left: 10px;
@@ -106,7 +106,7 @@ body {
 }
 
 .main-right {
-	width: 48%;
+	width: 38%;
 	height: 100%;
 	float: right;
 	font-size:larger; 
@@ -136,6 +136,7 @@ body {
 	justify-content: center;
 	color: var(--text);
 	background-color: var(--secondary);
+	z-index: -1;
 }
 
 #footer-main {
@@ -253,7 +254,27 @@ textarea {
 }
 
 input[value='DISCARD'] {
-	margin-top: 15px;
+	margin-top: 10px;
+}
+
+form {
+	line-height: 25px;
+}
+
+.validation {
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	bottom: 0px;
+	padding-left: 50px;
+	text-align: start;
+	justify-content: center;
+	font-size: 10px;
+	font-weight: bold;
+	color: red;
+	background-color: var(--sub1);
+	overflow: scroll;
+	z-index: 1;
 }
 
 
