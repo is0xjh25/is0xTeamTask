@@ -1,6 +1,6 @@
 # is0xTeamTask
 
-## Table of Content
+## Table of Contents
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
 * [Usage](#usage)
